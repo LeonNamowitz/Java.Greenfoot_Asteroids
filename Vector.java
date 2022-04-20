@@ -44,7 +44,7 @@ public class Vector
     /**
      * Add another vector to this vector
      */
-    ppublic void add(Vector other) 
+    public void add(Vector other) 
     {
         dx += other.dx;
         dy += other.dy;    

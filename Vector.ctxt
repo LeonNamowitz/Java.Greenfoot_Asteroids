@@ -18,7 +18,6 @@ comment3.target=void\ setDirection(int)
 comment3.text=\r\n\ Set\ the\ direction\ of\ this\ vector.\r\n
 comment4.params=other
 comment4.target=void\ add(Vector)
-comment4.text=\r\n\ Add\ another\ vector\ to\ this\ vector\r\n
 comment5.params=other
 comment5.target=void\ sub(Vector)
 comment6.params=
