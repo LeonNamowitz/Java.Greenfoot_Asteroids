@@ -24,12 +24,11 @@ public class Rocket extends Mover
      */
     public Rocket()
     {
-        gunReloadTime = 5;
+        gunReloadTime = 20;
         reloadDelayCount = 0;
         acceleration = new Vector(0, 0.3);    // used to accelerate when thrust is on
         increaseSpeed(new Vector(13, 0.3));   // initially slowly drifting
         shotsFired = 0;
-        setRotation(270);
     }
 
     /**
@@ -64,67 +63,45 @@ public class Rocket extends Mover
     /**
      * Check whether we are colliding with an asteroid.
      */
-    public boolean checkCollision() 
+    private void checkCollision() 
     {
         Asteroid a = (Asteroid) getOneIntersectingObject(Asteroid.class);
         if (a != null) {
             getWorld().addObject(new Explosion(), getX(), getY());
             getWorld().removeObject(this);
-            return(true);
-        }
-        else    {
-            return(false);
         }
     }
-
-    // public void asteroidCounter()
-    // {
-        
-    // }
     
     /**
      * Check whether there are any key pressed and react to them.
      */
     private void checkKeys() 
     {
-        if (Greenfoot.isKeyDown("up"))  {
-            thrust(true);
-        }
-        if (Greenfoot.isKeyDown("down"))  {
-            counterThrust(true);
-        }
-        if (Greenfoot.isKeyDown("down") == false && Greenfoot.isKeyDown("up") == false) {
-            setImage(rocket);
-        }       
-        if (Greenfoot.isKeyDown("left")) {
+        ignite(Greenfoot.isKeyDown("up"));
+        
+        if(Greenfoot.isKeyDown("left")) {
             turn(-5);
         }        
-        if (Greenfoot.isKeyDown("right")) {
+        if(Greenfoot.isKeyDown("right")) {
             turn(5);
         }
-        if (Greenfoot.isKeyDown("space")) {
+        if(Greenfoot.isKeyDown("space")) {
             fire();
-        }      
+        }        
     }
     
     /**
      * Should the rocket be ignited?
      */
-    private void thrust(boolean boosterOn) 
+    private void ignite(boolean boosterOn) 
     {
-        if (boosterOn == true) {
+        if (boosterOn) {
             setImage(rocketWithThrust);
             acceleration.setDirection(getRotation());
             increaseSpeed(acceleration);
         }
-    }
-
-    private void counterThrust(boolean boosterOn) 
-    {
-        if (boosterOn == true) {
-            setImage(rocketWithThrust);
-            acceleration.setDirection(getRotation());
-            reduceSpeed(acceleration);
+        else {
+            setImage(rocket);        
         }
     }
     

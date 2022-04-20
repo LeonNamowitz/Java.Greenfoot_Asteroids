@@ -42,7 +42,7 @@ public class Vector
     }
    
     /**
-     * Add another vector to this vector
+     * Add another vector to this vector.
      */
     public void add(Vector other) 
     {
@@ -51,20 +51,6 @@ public class Vector
         this.direction = (int) Math.toDegrees(Math.atan2(dy, dx));
         this.length = Math.sqrt(dx*dx+dy*dy);
     }   
-
-    public void sub(Vector other)
-    {
-        dx -= other.dx;
-        dy -= other.dy;
-        this.direction = (int) Math.toDegrees(Math.atan2(dy, dx));
-        this.length = Math.sqrt((dx*dx+dy*dy));
-    }
-
-    // not in use, maybe not usefull
-    public void invMagn()
-    {
-        this.length *= -1;
-    }
     
     /**
      * Return the x offset of this vector.

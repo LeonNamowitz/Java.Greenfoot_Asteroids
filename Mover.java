@@ -70,11 +70,6 @@ public abstract class Mover extends Actor
     {
         movement.add(s);
     }
-
-    public void reduceSpeed(Vector s)
-    {
-        movement.sub(s);
-    }
     
     /**
      * Return the current movement.
