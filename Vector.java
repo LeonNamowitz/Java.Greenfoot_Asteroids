@@ -60,7 +60,7 @@ public class Vector
         this.length = Math.sqrt((dx*dx+dy*dy));
     }
 
-    // not in use, maybe not usefull
+    // 
     public void invMagn()
     {
         this.length *= -1;
