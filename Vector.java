@@ -42,7 +42,7 @@ public class Vector
     }
    
     /**
-     * Add another vector to this vector.
+     * Add another vector to this vector. TEST
      */
     public void add(Vector other) 
     {
