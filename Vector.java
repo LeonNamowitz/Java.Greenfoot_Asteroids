@@ -42,9 +42,9 @@ public class Vector
     }
    
     /**
-     * Add another vector to this vector. TEST
+     * Add another vector to this vector
      */
-    public void add(Vector other) 
+    ppublic void add(Vector other) 
     {
         dx += other.dx;
         dy += other.dy;    
