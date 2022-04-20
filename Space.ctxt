@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Space
+comment0.text=\r\n\ Space.\ Something\ for\ rockets\ to\ fly\ in...\r\n\ \r\n\ @author\ Michael\ K\u00F6lling\r\n\ @version\ 2.1\r\n
+comment1.params=
+comment1.target=Space()
+comment1.text=\r\n\ Create\ the\ space\ world\ with\ black\ background\ and\ stars.\r\n
+comment2.params=number
+comment2.target=void\ createStars(int)
+comment2.text=\r\n\ Create\ some\ random\ stars\ in\ the\ world\r\n
+comment3.params=asteroidAmount
+comment3.target=void\ spawnAsteroid(int)
+comment4.params=xCoord\ yCoord
+comment4.target=void\ spawnShip(int,\ int)
+comment5.params=
+comment5.target=void\ asteroidCounter()
+comment6.params=type
+comment6.target=int\ generator(int)
+numComments=7
