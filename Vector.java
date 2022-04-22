@@ -60,7 +60,10 @@ public class Vector
         this.length = Math.sqrt((dx*dx+dy*dy));
     }
 
-    // 
+    /**
+     * Inverts magnitutde of vector. 
+     * Not working correctly!
+     */
     public void invMagn()
     {
         this.length *= -1;
