@@ -21,7 +21,7 @@ public class Space extends World
         background.setColor(Color.BLACK);
         background.fill();
         createStars(300);
-        // spawnAsteroid(4);
+        spawnAsteroid(4);
         spawnShip(400, 300);
         Explosion.initialiseImages();
     }
