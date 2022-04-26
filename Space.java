@@ -40,7 +40,7 @@ public class Space extends World
         }
     }
 
-    private void spawnAsteroid(int asteroidAmount)
+    public void spawnAsteroid(int asteroidAmount)
     {
         int amount = asteroidAmount;
         for (int i = 0; i < amount; i++) {
