@@ -134,9 +134,13 @@ public class Rocket extends Mover
     private void fire() 
     {
         if (reloadDelayCount >= gunReloadTime) {
-            Bullet b = new Bullet(getMovement().copy(), getRotation());
-            getWorld().addObject(b, getX(), getY());
-            b.move();
+            Bullet b1 = new Bullet(getMovement().copy(), getRotation());
+            getWorld().addObject(b1, getX()-10, getY()-10);
+            // Second Bullet simple offset not correct obv
+            Bullet b2 = new Bullet(getMovement().copy(), getRotation());
+            getWorld().addObject(b2, getX()+10, getY()+10);
+            b1.move();
+            b2.move();
             shotsFired++;
             reloadDelayCount = 0;   // time since last shot fired
         }
